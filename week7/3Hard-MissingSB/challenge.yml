@@ -1,0 +1,20 @@
+name: MissingSB
+author: wondPing
+description: |
+  Just ignore about missing SB on AES is not important. 
+
+tags:
+  - AES
+  - Transformation Matrix
+
+category: Crypto
+type: standard
+value: 100  # Static score, can be adjusted if needed
+flags:
+  - CNCC{Yeah,Just_missing_some_point_HERE}
+
+files:
+  - dist/aes.py
+  - dist/chall.py
+
+state: visible
