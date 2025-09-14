@@ -256,11 +256,9 @@ def signature_unsafe(m, sk, pk):
     # r = Hint(
     #     intlist2bytes([indexbytes(h, j) for j in range(b // 8, b // 4)]) + m
     # )
-    # r = Hint(m)
     r = Hint(
         m + intlist2bytes([indexbytes(h, j) for j in range(b // 8, b // 4)])
     )
-    
     R = scalarmult_B(r)
     S = (r + Hint(encodepoint(R) + pk + m) * a) % l
     return encodepoint(R) + encodeint(S)
