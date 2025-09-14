@@ -8,7 +8,7 @@ def genrsa():
   q = getPrime(512)
   n = p*q
   phi = (p-1)*(q-1)
-  e = 65537
+  e = 3
   d = pow(e, -1, phi)
   return e, d, n
 
